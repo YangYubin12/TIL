@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM이벤트처리하기</title>
+    <style>
+        h2{background-color: lightblue;width:400px;}
+    </style>
+</head>
+<body>
+    <h2>JS counter</h2>
+    <h4 id="number">0</h4>
+    <div>
+        <button id="inc">+1</button>
+        <button id="dec">-1</button>
+    </div>
+
+    <script>
+        const $number=document.getElementById("number");
+        const $incBtn=document.getElementById("inc");
+        const $decBtn=document.getElementById("dec");
+
+        $incBtn.addEventListener("click",increase);
+        function increase(){
+            const current=parseInt($number.textContent);
+            $number.textContent=current+1;
+        }
+        $decBtn.addEventListener("click",function(){
+            const current=parseInt($number.textContent);
+            $number.textContent=current-1;
+        });
+    </script>
+</body>
+</html>
