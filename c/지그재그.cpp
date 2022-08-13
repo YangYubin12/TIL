@@ -1,4 +1,3 @@
-//지그재그
 //#include <stdio.h>
 //int main(void)
 //{
