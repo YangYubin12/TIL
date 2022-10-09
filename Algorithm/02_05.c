@@ -15,5 +15,5 @@ int main()
       if(c[i]>0)
       printf("%c : %d\n",i, c[i]);
    }
-	 return 0;
+   return 0;
 }
