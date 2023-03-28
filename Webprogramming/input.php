@@ -14,6 +14,7 @@
    echo "<td>성별</td>";
    echo "<td>키</td>";
    echo "<td>삭제</td>";
+   echo "<td>수정</td>";
    echo "</tr>";
    while($row = mysqli_fetch_assoc($result)) {
       echo "<tr>";
@@ -23,6 +24,7 @@
          echo "<td>".$row['gender']."</td>";
          echo "<td>".$row['height']."</td>";
          echo "<td><a href=delete.php?num=".$row['num'].">[삭제]</a></td>";
+         echo "<td><a href=update.php?num=".$row['num'].">[수정]</a></td>";
       echo "</tr>";
 
    }
@@ -35,5 +37,4 @@
  성별:<input id=txt1 type=text name=mygender><br>
  키 : <input id=txt1 type=text name=myheight><br>
  <input id=mybtn1 type=submit value=확인>
-
 </form>
